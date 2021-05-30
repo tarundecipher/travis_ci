@@ -5,4 +5,4 @@ before_install:
   - docker build -t tarundecipher/practice_ci -f Dockerfile.dev .
 
 script:
-  - docker run tarundecipher/practice_ci npm run test -- --coverage
+  - docker run -e CI=true tarundecipher/practice_ci npm run test
